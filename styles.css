@@ -1,0 +1,61 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #3399ff, #c156d1);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+
+.cell {
+    height: 100px;
+    border: 3px solid #000000;
+    cursor: pointer;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#playAgain {
+    color: rgb(3, 3, 12);
+    cursor: pointer;
+}
+
+@keyframes bounce-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.popup {
+    /* Styles pour le pop-up */
+    width: 400px; /* Largeur souhaitée */
+    height: 200px; /* Hauteur souhaitée */
+    font-size: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #b7ccee;
+    padding: 20px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: bounce-in 0.5s ease-out; /* Application de l'animation */
+}
+
+.hidden {
+    display: none;
+}
